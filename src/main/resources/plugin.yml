@@ -1,0 +1,87 @@
+name: CaneIslands
+version: 1.0.0
+main: com.canefarm.CaneIslands
+api-version: '1.21'
+softdepend: [LuckPerms]
+authors: [AshieCloud045]
+website: Discord - AshieCloud045
+description: Sugarcane island grind with doubling daily quotas, rewards and a shop.
+commands:
+  start:
+    description: Create your cane island (one time only).
+    usage: /start
+  canehome:
+    description: Teleport to your island.
+    usage: /canehome
+  sell:
+    description: Sell (submit) all sugar cane in your inventory.
+    usage: /sell
+    aliases: [submit]
+  caneday:
+    description: Move on to the next day after completing the current one.
+    usage: /caneday
+  caneinfo:
+    description: Show your progress.
+    usage: /caneinfo
+  canerewards:
+    description: Preview upcoming day rewards.
+    usage: /canerewards
+  canetop:
+    description: Server leaderboard of total cane submitted.
+    usage: /canetop
+  caneshop:
+    description: Open the cane shop.
+    usage: /caneshop
+  isfly:
+    description: Toggle flight (needs the Flight shop item).
+    usage: /isfly
+  options:
+    description: Toggle your personal settings (notifications, sounds...).
+    usage: /options
+    aliases: [caneoptions]
+  autocaneday:
+    description: Toggle automatically starting the next day (needs the Auto Day shop item).
+    usage: /autocaneday
+  daytoggle:
+    description: Switch your island between permanent day and night (needs the Day / Night Control shop item).
+    usage: /daytoggle [reset]
+  is:
+    description: Visit and trust other islands. /is reset wipes only your island (progress is kept).
+    usage: /is <visit|trust|untrust|trusted|home|reset> [player]
+    aliases: [caneisland]
+  rebirth:
+    description: Rebirth - go back to Day 1 and reset /canetop for a permanent cane + coin boost (no rewards for days already reached).
+    usage: /rebirth
+  autorebirth:
+    description: Toggle automatically rebirthing when you are able to.
+    usage: /autorebirth
+  reset:
+    description: Completely reset your progress and island.
+    usage: /reset
+    aliases: [canereset]
+  commands:
+    description: Open a menu with every command and what it does.
+    usage: /commands
+    aliases: [canecommands, canehelp]
+  lightblock:
+    description: Fill every empty block of the chunk you stand in with light level 15. Use /lightblock remove to undo.
+    usage: /lightblock [remove]
+  removesponge:
+    description: Remove every sponge (wet and dry) on your island.
+    usage: /removesponge
+  drain:
+    description: Drain all the water in the chunk you stand in, on the layer (Y level) you are standing at only.
+    usage: /drain
+  chunkmanagement:
+    description: Open the chunk menu - see your unlocked chunks, show them with particle lines, and choose whether new chunks come with blocks.
+    usage: /chunkmanagement
+  pay:
+    description: Pay coins to another player.
+    usage: /pay <player> <amount>
+  caneadmin:
+    description: Admin tools.
+    usage: /caneadmin <coins|day|chunk> <player> [amount]
+permissions:
+  caneislands.admin:
+    description: Admin access and build bypass.
+    default: op
